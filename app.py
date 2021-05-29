@@ -1,6 +1,5 @@
 import streamlit as st
 from tensorflow.keras.models import load_model
-
 from files_upload import FilesUpload
 
 def main():
@@ -36,16 +35,6 @@ def main():
                 st.text("If irrelevent image is uploaded then model will assume it is infected")
                 st.text("Infected/Parasitized")
                 st.text("Probability: {}".format(model.predict(img)[0][0]))
-
-
-
-
-
-
-
-
-
-
 
 
 
