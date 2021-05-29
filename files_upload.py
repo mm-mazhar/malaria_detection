@@ -44,7 +44,12 @@ class FilesUpload(object):
             st.text(img_file.shape)
             st.text("image = {}, Width = {}, Height = {}, color = {}".format(img_file.shape[0],
                     img_file.shape[1], img_file.shape[2], img_file.shape[3]))
+            
+            os.remove(file_path)
+            
             return img_file
+        
+        
         else:
             st.write("Incorrect file or file extension")
 
